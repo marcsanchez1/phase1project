@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =============================================
+                HEADER CONTENT
+ ============================================= */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg,rgba(0,0,0,0.7) 20%, transparent),
+              /* linear-gradient(-25deg,rgba(0, 0, 0, .9) 5%, transparent 30%), */
+              url(../src/imgs/dr_strange_bg.jpg) center right;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+}
+
+header .header {
+  width: 100%;
+  max-width: 1640px;
+  text-align: center;
+  margin: auto;
+}
+
+#header-content {
+  width: 100%;
+  padding: 25px;
+}
+
+#header-content img {
+  width: 80%;
+}
+
+#header-content h2 {
+  color: #ffdf06;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .25rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-shadow: 1px 1px 3px #000;
+  width:fit-content;
+  margin: auto;
+  padding-left: 15px;
+}
+
+#header-content h2 span {
+  background: #fff;
+  padding: 3px 5px;
+  margin-left: 8px;
+  color:#000;
+  text-shadow: none;
+  border-radius: 0 4px 4px 0;
+}
+
+#form .form-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  position: sticky;
+}
+
+#header-content #form input#search {
+  align-items: center;
+  background: rgba(0,0,0,0.5);
+  width: 70%;
+  border: 1px solid #FFF;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 1rem;
+  padding: 15px;
+  color: #FFF;
+  text-align: center;
+  transition: .15s ease-in-out;
+}
+
+#header-content #form input#search::placeholder {
+  color: rgb(184, 183, 183);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#header-content #form input#search:focus {
+  box-shadow: inset 0 0 10px 5px #ffdf06;
+}
+
+#header-content #form button {
+  width: 10%;
+  font-size: 1rem;
+  padding: 15px;
+  background: rgb(255, 223, 6);
+  border: 1px solid #ffdf06;
+  border-radius: 0 5px 5px 0;
+  transition: .15s ease-in-out;
+}
+
+#header-content #form button:hover {
+  background: rgba(255, 223, 6, 0.5);
+}
+
+/* =============================================
+                MAIN CONTENT
+ ============================================= */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: url(https://wallpapercave.com/wp/wp5489595.jpg);
+  background-size: contain;
+  width: 100%;
+  max-width: 1640px;
+  margin: auto;
+  padding: 40px 20px;
+  position: relative;
+  height: 100vh;
+}
+
+main:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .6);
+}
+
+main * {
+  z-index: 10;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #FFF;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  border-top: 1px solid #FFF;
+  border-right: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+  border-bottom: 5px solid rgb(177, 6, 6);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, .8);
+  position: relative;
+}
+
+p.movie-description {
+  background: #FFF;
+  border-radius: 10px 10px 0 0;
+  font-size: 1rem;
+  text-align: left;
+  color: #000;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: .5rem 1rem 1rem;
+  color: #EEE;
+  letter-spacing: .5px;
+}
+
+.movie-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+
+h3.movie-title {
+  font-size: 1rem;
+  color: rgb(0, 56, 95);
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  margin: 0 0 20px;
+  border-bottom: 1px solid rgba(0, 56, 95, .7);
+  width: 80%;
+}
+
+.release-date {
+  display: block;
+  font-size: .75rem;
+  font-weight: normal;
+  color: #000;
+}
+
+.trailer a {
+  background: #000;
+  padding: 5px 10px;
+  color: #FFF;
+  width: fit-content;
+  border-radius: 5px;
+  font-size: .65rem;
+  font-weight: normal;
+  transition: .15s ease-in-out;
+}
+
+.trailer a:hover {
+  background: rgba(0, 0, 0, .6);
+}
+
+i.fa-thumbs-up {
+  color: rgb(177, 6, 6);
+  font-size: 1rem;
+}
+
+.rating {
+  color: rgb(177, 6, 6);
+  font-size: 1rem;
+  font-weight: bold;
+  /* background: rgb(177, 6, 6); */
+  /* border: 1px solid rgb(177, 6, 6);
+  border-top: none; */
+  /* margin: 15px 0 20px; */
+  margin-top: -8px;
+  /* border-radius: 0 0 5px 5px; */
+  width: 17%;
+  height: 40px;
+  text-align: center;
+  line-height: 2.6;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, .5); */
+}
+
+/* =============================================
+                MEDIA QUERIES
+ ============================================= */
+
+@media (min-width: 767px) {
+  
+  header {
+    justify-content: flex-start;
+    background-position: top right;
+  }
+
+  #header-content {
+    width: 50%;
+  }
+
+  .card {
+    width: 350px;
+    margin: 1rem;
+  }
+}
